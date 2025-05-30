@@ -17,8 +17,10 @@ block content
                 tr
                     td= edicao._id
                     td= edicao.anoEdicao
-                    td= edicao.organizacao
-                    td= edicao.vencedor
+                    td
+                        a(href=`/paises/${edicao.organizacao}`)= edicao.organizacao
+                    td
+                        a(href=`/paises/${edicao.vencedor}`)= edicao.vencedor
 
         h2 Músicas Participantes
         table.w3-table-all
