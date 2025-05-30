@@ -31,6 +31,7 @@ router.get('/', function(req, res, next) {
                 if (edicoes.length > 0) {
                     // Filter and map the data
                     const filteredEdicoes = edicoes.map(edicao => ({
+                        _id: edicao._id, // Include the ID for future reference
                         anoEdicao: edicao.anoEdicao,
                         organizacao: edicao.organizacao,
                         vencedor: edicao.vencedor || 'N/A' // Handle cases where vencedor might be missing

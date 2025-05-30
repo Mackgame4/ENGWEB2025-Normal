@@ -4,4 +4,20 @@ block content
   .w3-container.w3-teal
     h1= title
   .w3-container
-    p Welcome to #{title}
+    table.w3-table-all
+      thead
+        tr
+          th Id
+          th Ano
+          th Organização
+          th Vencedor
+      tbody
+        each edicao in edicoes
+          tr
+            td
+              a(href=`/${edicao._id}`)= edicao._id
+            td= edicao.anoEdicao
+            td
+              a(href=`/paises/${edicao.organizacao}`)= edicao.organizacao
+            td
+              a(href=`/paises/${edicao.vencedor}`)= edicao.vencedor
