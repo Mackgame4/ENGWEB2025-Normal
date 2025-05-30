@@ -73,5 +73,6 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log("Server is running at http://localhost:" + addr.port);
+  const foreBlue = '\x1b[34m';
+  console.log(foreBlue + "ℹ Server is running at http://localhost:" + addr.port);
 }
